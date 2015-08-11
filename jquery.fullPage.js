@@ -165,7 +165,10 @@
 
         //TO BE REMOVED in future versions. Maintained temporaly for backwards compatibility.
         $.extend($.easing,{ easeInQuart: function (x, t, b, c, d) { return c*(t/=d)*t*t*t + b; }});
-
+        
+        // ADDED by JASPER
+        FP.scrollSlider = scrollSlider;
+        
         /**
         * Sets the autoScroll option.
         * It changes the scroll bar visibility and the history of the site as a result.
@@ -471,7 +474,10 @@
         isScrollAllowed.m = {  'up':true, 'down':true, 'left':true, 'right':true };
         isScrollAllowed.k = $.extend(true,{}, isScrollAllowed.m);
         var originals = $.extend(true, {}, options); //deep copy
-
+        
+        // ADDED by JASPER
+        FP.originals = originals;
+        
         //timeouts
         var resizeId;
         var afterSectionLoadsId;
